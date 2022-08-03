@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* -----------------public style--------------- */
+:root{
+    --shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
+    --firstColor:#88888A;
+    --secondColor:#F6B3D6;
+    --wordColor:#8e7c8c;
+    --hoverWordColor:#525256;
+}
+body{
+    background-color: rgba(232,233,239,1);
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* ----------------start LOBBY STYLING-------------------- */
+#logo{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+#form-container{
+    max-width: 700px;
+    width: 95vw;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    padding: 46px;
+    border-radius: 5px;
+    position: fixed;
+    top: 46%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+#welcome-message{
+    text-align: center;
+    margin: 20px;
+}
+#welcome-message h1{
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #e7a2c6;
+}
+#welcome-message p{
+    font-size: 19px;
+    text-transform: capitalize;
+    color: var(--wordColor);
+    font-weight: 500;
+}
+
+.form-field{
+    margin: 20px;
+}
+.form-field label{
+    font-size: 16px;
+    line-height: 1.7em;
+}
+.form-field input{
+    width: 80%;
+    border: 2px solid rgba(198,202,219,1);
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 12%;
+}
+.form-field input[type='submit']{
+    background-color: #e7a2c6;
+    color: #ebe6e6;
+    font-size: 16px;
+    font-size: 16px;
+    padding: 10px 30px 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    letter-spacing: -1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+}
+.form-field input[type='submit']:hover{
+    background-color: #f7f7f7;
+    color: var(--wordColor);
+    border: 2px solid var(--secondColor);
+
+}
+
+/* ----------------end LOBBY STYLING-------------------- */
+
+/* ----------------start ROOM STYLING-------------------- */
+#room-name-wrapper{
+    text-align: center;
+    font-size: 18px;
+}
+#video-streams{
+    display: flex;
+    flex-wrap: wrap;
+    height: 95vh;
+    width: 95%;
+    margin: 0 auto;
+}
+.video-container{
+    flex-basis: 500px;
+    flex-grow: 1;
+    max-height: 100%;
+    min-height: 350px;
+    border: 1px solid rgb(150 75 172);
+    border-radius: 5px;
+    margin: 2px;
+    background-color: rgb(218 186 228);
+    position: relative;
+}
+.video-player{
+    height: 100%;
+    width: 100%;
+}
+.video-player > *{
+    border-radius: 5px;
+}
+.username-wrapper{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+}
+/* -----------ROOM STYLYING | CONTROLS---------------- */
+#controls-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 2em;
+    position: fixed;
+    bottom: 60px;
+}
+.control-icon{
+    height: 20px;
+    width: 20px;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#leave-btn{
+    background-color: rgb(255,80,80,1);
+}
+
+/* ----------------end ROOM STYLING-------------------- */

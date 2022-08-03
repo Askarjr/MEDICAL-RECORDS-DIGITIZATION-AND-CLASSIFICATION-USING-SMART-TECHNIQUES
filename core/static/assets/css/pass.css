@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* ------------public style----------- */
+:root{
+    --firstColor:#88888A;
+    --secondColor:#F6B3D6;
+    --wordColor:#8e7c8c;
+    --hoverWordColor:#525256;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #F3B6BD;
+    position: relative;
+    overflow: hidden;
+}
+.women-img{
+    position: absolute;
+    top: 182px;
+    left: -53px;
+    width: 506px;
+    animation: ladies 3s ease-in ;
+    -webkit-animation: ladies 3s ease-in ;
+}
+.women-img img{
+    width: 100%;
+}
+
+@keyframes ladies {
+    0%{opacity: 0; visibility: hidden;}
+    100%{opacity: 1; visibility: visible;}
+}
+.ribbon-group{
+    width: 52px;
+    position: absolute;
+    right: 176px;
+}
+.ribbon-group .ribb1{
+    width: 133px;
+    position: absolute;
+    right: -323px;
+    top: 0px;
+}
+
+.ribbon-group .ribb2{
+    width: 199px;
+    position: absolute;
+    top: 145px;
+    right: -365px;
+}
+
+.ribbon-group .ribb3{
+    
+    height: 100px;
+    width: 194px;
+    position: absolute;
+    right: -327px;
+    top: 283px;
+}
+.ribbon-group .ribb4{
+    width: 421%;
+    position: absolute;
+    top: 500px;
+    right: -394px;
+}
+
+/* @media (max-width:991) {
+} */
+/* -----------------sign-in form------------------- */
+.sign-form{
+    width: 257px;
+    height: 53px;
+    background-color: #fff;
+    position: absolute;
+    left: 33%;
+    top: -300%;
+    padding: 10px;
+    border-radius: 22px;
+}
+.sign-form h2{
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 34px;
+    color: #f0a5cb;
+}
+.sign-form .form-section{
+    margin-top: 36px;
+}
+input[type=text],input[type=password]{
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 9px;
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+}
+input[type=text]:focus,input[type=password]:focus{
+    border-color: var(--secondColor);
+    box-shadow: 0 0 8px var(--secondColor);
+}
+.sign-form .form-group input[type=text],.sign-form .form-group input[type=password]{
+    padding-left:50px ;
+    
+}
+.sign-form .form-group {
+    position: relative;
+    display: none;
+}
+.sign-form .form-group i{
+    position: absolute;
+    left: 11px;
+    top: 17px;
+    font-size: 24px;
+    color: #aaa;
+    transition: all .3s ease-in;
+}
+.form-group input[type=text]:focus + i, .form-group input[type=password]:focus + i {
+    color:var(--secondColor) ;
+}
+
+.sign-form .password-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sign-form .password-section a{
+    text-decoration: underline;
+}
+
+.sign-form .check-group .label-check{
+    font-size: 15px;
+    color: var(--wordColor);
+}
+.sign-form .check-group span{
+    display: none;
+}
+.sign-form .login{
+    position: absolute;
+    bottom: 29px;
+    left: 40%;
+    background-color: var(--secondColor);
+    padding: 15px 37px;
+    border-radius: 29px;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--wordColor);
+    text-decoration: none;
+    border: none;
+}
+.sign-form .login:hover{
+    background-color: #fff;
+    color: var(--hoverWordColor);
+    border: 1px solid var(--secondColor);
+}
+h2,.check-group,.forgetpass,.login{
+    display: none;
+}

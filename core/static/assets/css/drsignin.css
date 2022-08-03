@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* ------------public style----------- */
+:root{
+    --firstColor:#88888A;
+    --secondColor:#F6B3D6;
+    --wordColor:#8e7c8c;
+    --hoverWordColor:#525256;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #F3B6BD;
+    position: relative;
+    overflow: hidden;
+}
+.women-img{
+    position: absolute;
+    top: 182px;
+    left: -53px;
+    width: 506px;
+    animation: ladies 3s ease-in ;
+    -webkit-animation: ladies 3s ease-in ;
+}
+.women-img img{
+    width: 100%;
+}
+
+@keyframes ladies {
+    0%{opacity: 0; visibility: hidden;}
+    100%{opacity: 1; visibility: visible;}
+}
+.ribbon-group{
+    width: 52px;
+    position: absolute;
+    right: 176px;
+}
+.ribbon-group .ribb1{
+    width: 133px;
+    position: absolute;
+    right: -323px;
+    top: 0px;
+}
+
+.ribbon-group .ribb2{
+    width: 199px;
+    position: absolute;
+    top: 145px;
+    right: -365px;
+}
+
+.ribbon-group .ribb3{
+    
+    height: 100px;
+    width: 194px;
+    position: absolute;
+    right: -327px;
+    top: 283px;
+}
+.ribbon-group .ribb4{
+    width: 421%;
+    position: absolute;
+    top: 500px;
+    right: -394px;
+}
+
+/* @media (max-width:991) {
+} */
+/* -----------------sign-in form------------------- */

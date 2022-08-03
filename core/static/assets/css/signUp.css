@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* ------------public style----------- */
+:root{
+    --firstColor:#88888A;
+    --secondColor:#F6B3D6;
+    --wordColor:#8e7c8c;
+    --hoverWordColor:#525256;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    /* background-color: #F3B6BD; */
+    position: relative;
+}
+/* -------------image---------------- */
+.signUp{
+    background: #FDF2F6;
+    height: 100vh;
+}
+/* .signUp .row{
+
+} */
+.signUp .row .left-section{
+    width: 50%;
+    /* border-right: 2px solid #8e7c8c ; */
+}
+.signUp .row img{
+    width: 100%;
+    margin-top: 88px;
+}
+.signUp .row .rigth-section{
+    width: 50%;
+}
+.sign-form{
+    background-color: #fff;
+    margin-top: 46%;
+    margin-right: -4%;
+    width: 114%;
+    border-radius: 24px;
+    padding-top: 30px;
+    padding-left: 18px;
+}
+.sign-form h2{
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 34px;
+    color: #f0a5cb;
+}
+.sign-form .form-section{
+    padding-top: 21px;
+    padding-right: 14px;
+    padding-bottom: 17px;
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 9px;
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+}
+input[type=text],input[type=password] :focus {
+    border-color: var(--secondColor);
+    box-shadow: 0 0 8px var(--secondColor);
+}
+.form-group input[type=text],input[type=password]:focus + i{
+    color:var(--secondColor) ;
+}
+.sign-form .form-group input[type=text],input[type=password]{
+    padding-left:50px ;
+    
+}
+.sign-form .form-group {
+    position: relative;
+}
+.sign-form .form-group i{
+    position: absolute;
+    left: 11px;
+    top: 17px;
+    font-size: 24px;
+    color: #aaa;
+    transition: all .3s ease-in;
+}
+.sign-form  .sgn-up{
+    margin-left: 35%;
+    padding: 5px 15px;
+    background: var(--secondColor);
+    width: 35px;
+    border-radius: 12px;
+    color: var(--wordColor);
+    text-decoration: none;
+}
