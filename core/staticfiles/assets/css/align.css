@@ -1,0 +1,11 @@
+.btn-two {
+    border: 1px solid black;
+    padding: 20px;
+    text-decoration: none;
+    background-color: black;
+    /* color: white; */
+    text-align: center;
+    margin: 60px 0 0 0;
+    display: inline-block;
+  }
+  
