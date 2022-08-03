@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/external/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/external/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/external/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/patientdata.css' %}">
+    <title>Patient Data</title>
+</head>
+<body>
+    <!-- ---------------------------start navbar----------------- -->
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'assets/images/logo/logo.png' %}" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-lg-auto">
+                <a href="#" class="close-icon d-lg-none"><i class="fas fa-times"></i></a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'patientdata' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'add' %}">Add patient's Data </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">View patient's Data </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Doctor<span class="icon-down d-lg-none"><i class="fas fa-angle-down"></i></span></a>
+                    <ul class="nav-drop">
+                        <li class="drop-item"><a href="{% url 'adddoctor' %}" class="drop-link">Add Doctor</a></li>
+                        <li class="drop-item"><a href="{% url 'deletedoctor' %}" class="drop-link">Delete Doctor</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Sign-out</a>
+                </li>
+
+            </ul>
+            <a href="#"><i class="fas fa-user profile-icon d-none d-lg-block"></i></a>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link">Welcome&#9;{{username}} </a>
+            </li>
+            {% endif %}
+
+            <div class="social-icons d-lg-none">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-vimeo"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------end navbar----------------- -->
+
+    <!-- ---------------------------start boxes data----------------- -->
+    <div class="boxes">
+        <div class="container">
+            <div class="box-parent">
+                <div class="box-child">
+                    <i class="fas fa-user-plus"></i>
+                    <h4>Add new patient</h4>
+                    <p>Add More Patients to the system </p>
+                    <a href="{% url 'add' %}" class="btn">Add</a>
+                </div>
+
+
+                <div class="box-child">
+                    <i class="fas fa-database"></i>
+                    <h4>Show patient's data</h4>
+                    <p>Search and view the patient Documents </p>
+                    <a href="{% url 'show' %}" class="btn">Show Data</a>
+                </div> 
+
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------end boxes data----------------- -->
+
+    <script src="{% static 'assets/js/external/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/external/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>

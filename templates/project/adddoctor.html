@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/external/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/external/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/external/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/adddoctor.css' %}">
+    <title>Add Doctors</title>
+</head>
+<body>
+    <!-- ---------------------------start navbar----------------- -->
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'assets/images/logo/logo.png'%}" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-lg-auto">
+                <a href="#" class="close-icon d-lg-none"><i class="fas fa-times"></i></a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'patientdata' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'add' %}">Add patient's Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'show' %}">View patient's Data</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Doctor <span class="icon-down d-lg-none"><i class="fas fa-angle-down"></i></span></a>
+                    <ul class="nav-drop">
+                        <li class="drop-item"><a href="{% url 'adddoctor' %}" class="drop-link">Add Doctor</a></li>
+                        <li class="drop-item"><a href="{% url 'deletedoctor' %}" class="drop-link">Delete Doctor</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Sign-out</a>
+                </li>
+            </ul>
+            <a href="#"><i class="fas fa-user profile-icon d-none d-lg-block"></i></a>
+            <div class="social-icons d-lg-none">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-vimeo"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------end navbar----------------- -->
+
+    <!-- ----------------------------start cover img------------- -->
+    <section class="cover-img">
+        <!-- <div class="image">
+            <img src="{% static 'assets/images/addingPage/doc4.jpg '%}" alt="">
+        </div> -->
+    </section>
+
+    <section class="add-form" >
+        
+        <div class="container-fluid">
+            <form class="form-section" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h3>Add Doctor's Information</h3>
+                <div class="row">
+                    <ul>
+                   
+                        <li><input type="text" placeholder="Doctor username" Required name="Name" class="form-control"></li>
+
+                    </ul>
+                    <ul class="end-form">
+                    
+                        <li><input type="number" placeholder="Doctor ID " Required name="docid" class="form-control"></li>
+                    </ul>
+ 
+                <button class="crt-folder">Add Doctor</button>
+
+            </form>
+        </div>
+    </section>
+    <!-- ----------------------------end cover img------------- -->
+
+    
+
+
+
+    <script src="{% static 'assets/js/external/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/external/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/addingPage.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/external/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/external/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/external/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Update.css' %}">
+    <title>Update Page</title>
+</head>
+<body>
+    <!-- ---------------------------start navbar----------------- -->
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'assets/images/logo/logo.png'%}" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-lg-auto">
+                <a href="#" class="close-icon d-lg-none"><i class="fas fa-times"></i></a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'patientdata' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Add patient's Data</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'show' %}">View patient's Data</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Doctor <span class="icon-down d-lg-none"><i class="fas fa-angle-down"></i></span></a>
+                    <ul class="nav-drop">
+                        <li class="drop-item"><a href="{% url 'adddoctor' %}" class="drop-link">Add Doctor</a></li>
+                        <li class="drop-item"><a href="{% url 'deletedoctor' %}" class="drop-link">Delete Doctor</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Sign-out</a>
+                </li>
+            </ul>
+            <a href="#"><i class="fas fa-user profile-icon d-none d-lg-block"></i></a>
+            <div class="social-icons d-lg-none">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-vimeo"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------end navbar----------------- -->
+
+    <!-- ----------------------------start cover img------------- -->
+    <section class="cover-img">
+        <div class="content">
+            <h2>..</h2>
+            <p>..</p>
+        </div>
+    </section>
+
+    <section class="add-form">
+        <div class="container-fluid">
+            <form class="form-section" method="POST" enctype="multipart/form-data">
+                <h3>Update Patient's Information</h3>
+                <div class="row">
+                    <ul>
+                 <!-- <form action="" > -->
+                    {% csrf_token %}
+                        <!-- <li><input type="text" placeholder="Name" Required name="Name" name="name" class="form-control"></li> -->
+
+                        <li><input type="text" name="date" placeholder="Date"></li>
+                        <li><input type="text"name="cat" placeholder="category"></li>
+                        <!-- <li><select name="device" class="device">
+                            <option value="moropgology">moropgology</option>
+                        </select></li> -->
+                    </ul>
+                    <ul class="end-form">
+                        <li><input type="number" name="imageid" placeholder="image ID"></li>
+                        <!-- <li><input type="number" placeholder="Patient ID " Required name="patientid" class="form-control"></li> -->
+                    </ul>
+                    <div class="attachment">
+                        <p>
+                            <button class="btn btn-attach" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Attachment
+                            </button>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="child-div">
+                                <button type="button" class="btn-upload">Upload File</button>
+                                <div class="choose"><input type="file" Required name="image" name="image"  multiple class="form-control"></div>
+                                <button type="button" class="btn-scan">Scan</button>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
+           
+
+                <textarea name="notes" class="area-note" cols="30" rows="10" placeholder="Notes"></textarea>
+                <button class="crt-folder">Create Folder</button>
+            
+
+            </form>
+        </div>
+    </section>
+    <!-- ----------------------------end cover img------------- -->
+
+    
+
+
+
+    <script src="{% static 'assets/js/external/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/external/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/addingPage.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+</body>
+</html>

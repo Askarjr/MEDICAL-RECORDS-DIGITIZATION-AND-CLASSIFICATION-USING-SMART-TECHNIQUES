@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/css/external/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/external/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/external/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/new3.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'">
+    <title>Home</title>
+</head>
+<body>
+    
+    <!-- ---------------------------start navbar----------------- -->
+    <nav class="navbar navbar-expand-lg scrolled">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'assets/images/logo/logo.png' %}" alt="">
+            <img src="{% static 'assets/images/addingpage/logo.png' %}" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav m-lg-auto">
+                <a href="#" class="close-icon d-lg-none"><i class="fas fa-times"></i></a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Doctor</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign-in <span class="icon-down d-lg-none"><i class="fas fa-angle-down"></i></span></a>
+                    <ul class="nav-drop">
+                        <li class="drop-item"><a href="{% url 'signin' %}" class="drop-link">Admin sign-in</a></li>
+                        <li class="drop-item"><a href="{% url 'doctorsignin' %}" class="drop-link">Doctor sign-in</a></li>
+                        <li class="drop-item"><a href="{% url 'patientsignin' %}" class="drop-link">Patient sign-in</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <a href="#"><i class="fas fa-user profile-icon d-none d-lg-block"></i></a>
+            <div class="social-icons d-lg-none">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-vimeo"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------------------end navbar----------------- -->
+
+
+    <!-- ---------------------------start header----------------- -->
+    <header>
+        <!-- <div class="container"> -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image">
+                        <img src="{% static 'assets/images/addingpage/stressed.png'%}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-5 ">
+                    <div class="content">
+                        <h2>Forget your Password? </h2>
+                        <p>If you forgot your password, please contact Clinic services at 19381. Will be fixed right away !.</p>
+                        <button style="background-color:pink"; class="btn btn-public d-none d-lg-block">More Info</button>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    </header>
+    <!-- ---------------------------end header----------------- -->
+
+    <!-- ----------------------------start aboutus----------------------- -->
+    <section class="aboutus">
+        <div class="container">
+            <div class="row">
+                <div class="content col-lg-6">
+                    <h2>Forget your Password? </h2>
+                        <p>If you forgot your password, please contact Clinic services at 19381. Will be fixed right away !.</p>
+                    <button style="background-color:white" class="btn btn-public d-none d-lg-block">learn more</button>
+                </div>
+                <div class="image col-lg-6">
+                    <img src="{% static 'assets/images/addingpage/dad.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----------------------------end aboutus----------------------- -->
+
+    <!-- ---------------------start services----------------- -->
+    <section class="services">
+        <div class="container">
+            <h2>our services</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="sec1">
+                        <div class="row">
+                            <i class="fas fa-user-md"></i>
+                            <h5>Patient Upload </h5>
+                        </div>
+                        <p>patient can  upload his documents in his electronic medical record.</p>
+                    </div>
+                    <div class="sec2">
+                        <div class="row">
+                            <i class="fas fa-user-md"></i>
+                            <h5>Patient view</h5>
+                        </div>
+                        <p>Patient cann view his electronic medical records anytime.</p>
+                    </div>
+                </div>
+                <div class="image col-lg-4">
+                    <!-- <img src="{% static 'assets/images/home/services.png '%}" alt=""> -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="sec3">
+                        <div class="row">
+                            <i class="fas fa-user-md"></i>
+                            <h5>video confernace</h5>
+                        </div>
+                        <p>Doctors can video conferance in operation room for second opinion for best healthcare.</p>
+                    </div>
+                    <div class="sec4">
+                        <div class="row">
+                            <i class="fas fa-user-md"></i>
+                            <h5>Better communcation</h5>
+                        </div>
+                        <p>By using EHR we deliver the best care and able us to communicate with the patient.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------end services----------------- -->
+
+    <!-- ---------------------start footer----------------- -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-box">
+                        <img src="{% static 'assets/images/home/footer.jfif' %}" alt="">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-box">
+                        <div class="title-center">
+                            <h2>OPENING HOURS</h2>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Mon – Tue: 10.00 – 18.00</li>
+                            <li><i class="fas fa-check-circle"></i>Wed – Thur: 10.00 – 17.00</li>
+                            <li><i class="fas fa-check-circle"></i>Fri – Sat: 10.00 – 14.00</li>
+                            <li><i class="fas fa-check-circle"></i>Saturday: 10.00 – 12.00</li>
+                            <li><i class="fas fa-times-circle"></i>Sunday: Closed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ---------------------end footer----------------- -->
+
+
+
+
+    <script src="{% static 'assets/js/external/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/external/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>
